@@ -10,7 +10,7 @@ for %%F in (*) do (
     set "mantener=0"
     rem Comparar cada archivo en el directorio con el archivo inmortal actual
     for /f %%A in (archivosInmortales.txt) do (
-        echo %%F
+        echo "%%F"
         if "%%~nxF" equ "%%~nxA" (
             set "mantener=1"
             echo !mantener!
@@ -20,12 +20,12 @@ for %%F in (*) do (
     if "!mantener!" equ "1" (
         echo se mantuvo
     ) else (
-        del %%F 
-        echo eliminado
+        del "%%F"
+        echo se elimino %%F 
         set "mantener=0"
     )
 )
 
 endlocal
-echo funcionó?
+echo funciono?
 pause
