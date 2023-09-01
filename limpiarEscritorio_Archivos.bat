@@ -5,8 +5,10 @@ setlocal enabledelayedexpansion
 
 rem script para eliminar archivos de un directorio dado
 
-rem Agregar directorio y archivo .txt con los nombres de los archivos a guardar
+
+rem Especifica la ruta completa del directorio
 set "directorio="
+rem Especifica la ruta completa del archivo .txt con los nombres de las carpetas a guardar
 set "whitelist="
 
 cd /d "%directorio%"
